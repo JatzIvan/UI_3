@@ -1,0 +1,44 @@
+(Peter je rodic Jano)
+(Peter je rodic Vlado)
+(manzelia Peter Eva)
+(Vlado je rodic Maria)
+(Vlado je rodic Viera)
+(muz Peter)
+(muz Jano)
+(muz Vlado)
+(zena Maria)
+(zena Viera)
+(zena Eva)
+/***/
+MENO DruhyRodic1
+AK ((?X je rodic ?Y)(manzelia ?X ?Z))
+POTOM ((pridaj ?Z je rodic ?Y))
+
+MENO DruhyRodic2
+AK ((?X je rodic ?Y)(manzelia ?Z ?X))
+POTOM ((pridaj ?Z je rodic ?Y))
+
+MENO Otec
+AK ((?X je rodic ?Y)(muz ?X))
+POTOM ((pridaj ?X je otec ?Y))
+
+MENO Matka
+AK ((?X je rodic ?Y)(zena ?X))
+POTOM ((pridaj ?X je matka ?Y))
+
+MENO Surodenci
+AK ((?X je rodic ?Y)(?X je rodic ?Z)(<> ?Y ?Z))
+POTOM ((pridaj ?Y a ?Z su surodenci))
+
+MENO Brat
+AK ((?Y a ?Z su surodenci)(muz ?Y))
+POTOM ((pridaj ?Y je brat ?Z))
+
+MENO Stryko
+AK ((?Y je brat ?Z)(?Z je rodic ?X))
+POTOM ((pridaj ?Y je stryko ?X)(sprava ?X ma stryka))
+
+MENO Test mazania
+AK ((?Y je stryko ?X)(zena ?X))
+POTOM ((vymaz zena ?X))
+

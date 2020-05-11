@@ -1,0 +1,74 @@
+(typ karoserie sedan)
+(pocet dveri 5)
+(pohanana naprava zadna)
+(predna maska mriezka)
+(ma okruhle svetla)
+/***/
+MENO FIAT1
+AK ((typ karoserie ?sedan_hatchback))
+POTOM ((pridaj karoseria ?sedan_hatchback))
+
+MENO FIAT2
+AK ((karoseria sedan)(pocet dveri ?4_5))
+POTOM ((pridaj sedan ?4_5))
+
+MENO FIAT3
+AK ((sedan 5))
+POTOM ((pridaj vybrany Fiat Croma)(sprava Fiat Croma))
+
+MENO FIAT4
+AK ((sedan 4)(pohanana naprava ?predna_zadna))
+POTOM ((pridaj naprava ?predna_zadna))
+
+MENO FIAT5
+AK ((naprava predna))
+POTOM ((pridaj vybrany Fiat Tempra)(sprava Fiat Tempra))
+
+MENO FIAT6
+AK ((naprava zadna))
+POTOM ((pridaj vybrany Fiat Mirafiorri)(sprava Fiat Mirafiorri))
+
+MENO FIAT7
+AK ((karoseria hatchback)(pocet dveri ?3alebo5))
+POTOM ((pridaj hatchback ?3alebo5))
+
+MENO FIAT8
+AK ((hatchback 3)(predna maska ?ano_nie_mriezka))
+POTOM ((pridaj 3 maska ?ano_nie_mriezka))
+
+MENO FIAT9
+AK ((3 maska ano))
+POTOM ((pridaj vybrany Fiat Tipo3)(sprava Fiat Tipo3))
+
+MENO FIAT10
+AK ((3 maska nie))
+POTOM ((pridaj vybrany Fiat Punto3)(sprava Fiat Punto3))
+
+MENO FIAT11
+AK ((3 maska mriezka))
+POTOM ((pridaj vybrany Fiat Panda3)(sprava Fiat Panda3))
+
+MENO FIAT12
+AK ((hatchback 5)(predna maska ?ano_nie_mriezka))
+POTOM ((pridaj 5 maska ?ano_nie_mriezka))
+
+MENO FIAT13
+AK ((5 maska ano))
+POTOM ((pridaj vybrany Fiat Tipo5)(sprava Fiat Tipo5))
+
+MENO FIAT14
+AK ((5 maska nie))
+POTOM ((pridaj vybrany Fiat Punto5)(sprava Fiat Punto5))
+
+MENO FIAT15
+AK ((5 maska mriezka)(ma ?okruhle_integrovane svetla))
+POTOM ((pridaj ?okruhle_integrovane svetla))
+
+MENO FIAT16
+AK ((integrovane svetla))
+POTOM ((pridaj vybrany Fiat Uno5)(sprava Fiat Uno5))
+
+MENO FIAT17
+AK ((okruhle svetla))
+POTOM ((pridaj vybrany Fiat Ritmo5)(sprava Fiat Ritmo5))
+
